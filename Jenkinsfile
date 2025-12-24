@@ -196,7 +196,6 @@ pipeline {
                         zap-baseline.py \
                         -t http://localhost:9000 \
                         -r /zap/wrk/zap_report.html \
-                        -g /zap/wrk/zap.yaml  
                         || true 
                         """
                         // || true prevents pipeline failure if vulnerabilities are found (typical for Baseline scans)
