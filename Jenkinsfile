@@ -11,8 +11,8 @@ pipeline {
         // Configuration
         NEXUS_REGISTRY = "registry.nchldemo.com"
         NEXUS_CRED     = "nexus-auth"      // ID of Jenkins Credential
-        IMAGE_NAME     = "fintech-python-app" // Add your name here
-        CONTAINER_NAME = "fintech-prod-container" // Add your name here
+        IMAGE_NAME     = "fintech-python-app-aayushpokharel" // Add your name here
+        CONTAINER_NAME = "fintech-prod-container-aayushpokharel" // Add your name here
         
         // ZAP Configuration
         ZAP_PORT       = "9000" // Change the port
@@ -20,7 +20,7 @@ pipeline {
         // Map Cosign Credentials
         COSIGN_PASSWORD = credentials('cosign-private-key')
         SONAR_SERVER_NAME = "sonar-server-admin"
-        SONAR_PROJECT_KEY = "fintech-app-trainer" // Add your name here
+        SONAR_PROJECT_KEY = "fintech-app-trainer-aayushpokharel" // Add your name here
     }
 
     stages {
@@ -36,7 +36,7 @@ pipeline {
                     sh 'venv/bin/pip install --upgrade pip'
                     sh 'venv/bin/pip install -r requirements.txt'
                     
-                    echo "--- Running Unit Tests with Coverage ---"
+                    echo "--- Runnin-pipeline.gitg Unit Tests with Coverage ---"
                     // 3. Run pytest using the binary INSIDE the venv
                     sh 'venv/bin/pytest --cov=app --cov-report=xml test_app.py'
                 }
